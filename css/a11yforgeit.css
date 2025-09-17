@@ -1,0 +1,20 @@
+
+/* A11yForgeIT additions: dark mode and skip link */
+body.dark-mode {
+  background: #111111;
+  color: #ffffff;
+}
+body.dark-mode a { color: #4da3ff; }
+
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #005fcc;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+  transition: top 0.3s;
+}
+.skip-to-content:focus { top: 10px; }

@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - My Website</title>
+    <title>A11yForgeIT</title>
     <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="css/a11yforgeit.css">
 </head>
 <body class="font-sans leading-relaxed m-0 p-5 bg-gray-100">
     <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
@@ -102,17 +103,7 @@
     </script>
 
 <script>
-// Fix for null .name error
-const input = document.querySelector('#userName');
-if (input) {
-  console.log(input.name);
-} else {
-  console.warn("Expected input element not found in about.html");
-}
-</script>
-
-
-<script>
+// Dark mode toggle (persists in localStorage)
 const toggle = document.getElementById('darkModeToggle');
 if (toggle) {
   toggle.addEventListener('click', () => {
@@ -123,6 +114,18 @@ if (toggle) {
   if (localStorage.getItem('darkMode') === 'true') {
     document.body.classList.add('dark-mode');
   }
+}
+</script>
+
+
+<script>
+// Fix for null .name error in about.html
+const input = document.querySelector('#userName');
+if (input) {
+  // safe to use input.name
+  console.log(input.name);
+} else {
+  console.warn("Expected input element not found in about.html");
 }
 </script>
 
