@@ -1,50 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A11yForgeIT - Accessibility</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="assets/favicon.png">
-  <script src="js/theme.js" defer></script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Accessibility - A11yForgeIT</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="assets/favicon.png">
+<script src="js/theme.js" defer></script>
 </head>
 <body>
-  <a href="#main" class="skip-link">Skip to main content</a>
-  <header>
-    <nav class="navbar" aria-label="Main navigation">
-      <a href="index.html" class="logo">A11yForgeIT</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="docs.html">Docs</a></li>
+<a href="#main" class="skip-link">Skip to main content</a>
+<header class="navbar" role="banner" aria-label="Main header">
+  <a class="logo" href="index.html">A11yForgeIT</a>
+  <nav role="navigation" aria-label="Primary"><ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="docs.html">Docs</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul></nav>
+  <div class="controls" role="toolbar" aria-label="Accessibility controls">
+    <button data-toggle-theme aria-pressed="false" aria-label="Toggle theme">Theme</button>
+    <button data-font="small" aria-label="Small font">A-</button>
+    <button data-font="normal" aria-label="Normal font">A</button>
+    <button data-font="large" aria-label="Large font">A+</button>
+  </div>
+</header>
+<main id="main" class="container" role="main">
+  <section class="hero" role="region" aria-labelledby="page-title">
+    <h1 id="page-title">Accessibility</h1>
+    <p>Accessibility statement and features.</p>
+    <div class="card"><p><img src="assets/mockups/accessibility-desktop-light.png" alt="" class="preview-img"></p><p style="margin-top:.5rem">This is placeholder content for the Accessibility page.</p></div>
+  </section>
+</main>
+
+<footer aria-label="Footer">
+  <div class="container footer-grid" role="contentinfo">
+    <div>
+      <h4>Company</h4>
+      <p>Small-business starter template.</p>
+    </div>
+    <div>
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="docs.html">Docs & Knowledge Base</a></li>
+        <li><a href="accessibility.html">Accessibility</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <div class="controls">
-        <button onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
-        <button onclick="resizeText('increase')" aria-label="Increase font size">A+</button>
-        <button onclick="resizeText('decrease')" aria-label="Decrease font size">A-</button>
-      </div>
-    </nav>
-  </header>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> A11yForgeIT. All rights reserved.</p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 
-  <main id="main">
-    <section class="hero">
-      <h1>Accessibility</h1>
-      <p>Accessibility statement and features overview.</p>
-      <div class="card">Placeholder content block with gradient + rounded corners</div>
-    </section>
-  </main>
-
-  <footer aria-label="Footer navigation">
-    <p>&copy; 2025 A11yForgeIT. All rights reserved.</p>
-    <ul class="footer-links">
-      <li><a href="about.html">About</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="docs.html">Docs & Knowledge Base</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="accessibility.html">Accessibility</a></li>
-    </ul>
-  </footer>
-</body>
-</html>
+</body></html>
