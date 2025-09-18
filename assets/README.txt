@@ -1,0 +1,1 @@
+Place your logo, favicon, and mockup images here.

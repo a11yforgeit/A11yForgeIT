@@ -4,63 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A11yForgeIT - Contact</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/favicon.png">
+  <script src="js/theme.js" defer></script>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
-  <!-- Header -->
-  <header class="bg-white shadow">
-    <nav class="container mx-auto flex justify-between items-center p-4">
-      <div class="text-2xl font-bold text-blue-600">A11yForgeIT</div>
-      <ul class="flex space-x-6">
-        <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
-        <li><a href="about.html" class="hover:text-blue-600">About</a></li>
-        <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header>
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="index.html" class="logo">A11yForgeIT</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="docs.html">Docs</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
+      <div class="controls">
+        <button onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+        <button onclick="resizeText('increase')" aria-label="Increase font size">A+</button>
+        <button onclick="resizeText('decrease')" aria-label="Decrease font size">A-</button>
+      </div>
     </nav>
   </header>
 
-  <!-- Main -->
-  <main class="container mx-auto p-6">
-
-    <section class="bg-white rounded-xl shadow p-8 max-w-lg mx-auto">
-      <h1 class="text-3xl font-bold mb-6 text-center">Contact Us</h1>
-      <form id="contactForm" class="space-y-4">
-        <div>
-          <label for="name" class="block font-semibold">Name</label>
-          <input type="text" id="name" name="name" required class="w-full border rounded-lg p-2 mt-1 focus:ring-2 focus:ring-blue-500">
-        </div>
-        <div>
-          <label for="email" class="block font-semibold">Email</label>
-          <input type="email" id="email" name="email" required class="w-full border rounded-lg p-2 mt-1 focus:ring-2 focus:ring-blue-500">
-        </div>
-        <div>
-          <label for="message" class="block font-semibold">Message</label>
-          <textarea id="message" name="message" rows="4" required class="w-full border rounded-lg p-2 mt-1 focus:ring-2 focus:ring-blue-500"></textarea>
-        </div>
-        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Send Message</button>
-      </form>
-      <p id="successMessage" class="hidden mt-4 text-green-600 font-semibold text-center">
-        ✅ Thank you! Your message has been sent (demo).
-      </p>
+  <main id="main">
+    <section class="hero">
+      <h1>Contact</h1>
+      <p>Get in touch with us.</p>
+      <div class="card">Placeholder content block with gradient + rounded corners</div>
     </section>
-    <script>
-      document.getElementById("contactForm").addEventListener("submit", function(e) {
-        e.preventDefault();
-        document.getElementById("successMessage").classList.remove("hidden");
-        this.reset();
-      });
-    </script>
-
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-gray-100 text-center p-6 mt-8">
-    <nav class="mb-2">
-      <a href="accessibility.html" class="text-sm text-gray-600 hover:text-blue-600 mx-2">Accessibility</a> |
-      <a href="privacy.html" class="text-sm text-gray-600 hover:text-blue-600 mx-2">Privacy</a> |
-      <a href="terms.html" class="text-sm text-gray-600 hover:text-blue-600 mx-2">Terms</a>
-    </nav>
-    <p class="text-sm text-gray-600">© 2025 A11yForgeIT. Built with accessibility in mind.</p>
+  <footer aria-label="Footer navigation">
+    <p>&copy; 2025 A11yForgeIT. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="docs.html">Docs & Knowledge Base</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+    </ul>
   </footer>
 </body>
 </html>

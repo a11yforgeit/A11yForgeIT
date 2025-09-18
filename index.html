@@ -4,40 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A11yForgeIT - Home</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/favicon.png">
+  <script src="js/theme.js" defer></script>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
-  <!-- Header -->
-  <header class="bg-white shadow">
-    <nav class="container mx-auto flex justify-between items-center p-4">
-      <div class="text-2xl font-bold text-blue-600">A11yForgeIT</div>
-      <ul class="flex space-x-6">
-        <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
-        <li><a href="about.html" class="hover:text-blue-600">About</a></li>
-        <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header>
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="index.html" class="logo">A11yForgeIT</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="docs.html">Docs</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
+      <div class="controls">
+        <button onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+        <button onclick="resizeText('increase')" aria-label="Increase font size">A+</button>
+        <button onclick="resizeText('decrease')" aria-label="Decrease font size">A-</button>
+      </div>
     </nav>
   </header>
 
-  <!-- Main -->
-  <main class="container mx-auto p-6">
-
-    <section class="bg-white rounded-xl shadow p-8 text-center">
-      <h1 class="text-3xl font-bold mb-4">Welcome to A11yForgeIT</h1>
-      <p class="mb-6">A clean, mobile-first accessibility framework for designers and small businesses.</p>
-      <a href="about.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Learn More</a>
+  <main id="main">
+    <section class="hero">
+      <h1>Home</h1>
+      <p>Welcome to A11yForgeIT, an accessible starter template.</p>
+      <div class="card">Placeholder content block with gradient + rounded corners</div>
     </section>
-
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-gray-100 text-center p-6 mt-8">
-    <nav class="mb-2">
-      <a href="accessibility.html" class="text-sm text-gray-600 hover:text-blue-600 mx-2">Accessibility</a> |
-      <a href="privacy.html" class="text-sm text-gray-600 hover:text-blue-600 mx-2">Privacy</a> |
-      <a href="terms.html" class="text-sm text-gray-600 hover:text-blue-600 mx-2">Terms</a>
-    </nav>
-    <p class="text-sm text-gray-600">© 2025 A11yForgeIT. Built with accessibility in mind.</p>
+  <footer aria-label="Footer navigation">
+    <p>&copy; 2025 A11yForgeIT. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="docs.html">Docs & Knowledge Base</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+    </ul>
   </footer>
 </body>
 </html>
