@@ -1,0 +1,141 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #222;
+  padding: 1em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 1em;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  flex: 1;
+  padding: 2em;
+}
+
+.hero {
+  text-align: center;
+  padding: 5em 1em;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 1em;
+}
+
+form input, form textarea {
+  padding: 0.5em;
+  margin-top: 0.5em;
+}
+
+form button {
+  margin-top: 1em;
+  padding: 0.7em;
+  background: #2575fc;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background: #1250b5;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #bbb;
+  text-align: center;
+  padding: 1.5em 1em;
+  margin-top: auto;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.5em;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Accessibility controls */
+.accessibility-controls {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 0.5em;
+  z-index: 1000;
+}
+
+.accessibility-controls button {
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 0.5em 0.8em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.accessibility-controls button:hover {
+  background: #444;
+}
+
+/* High contrast mode */
+body.high-contrast {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+body.high-contrast a {
+  color: yellow !important;
+}
