@@ -1,62 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A11yForgeIT</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A11yForgeIT - Accessible Web Template</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<div class="accessibility-controls">
-  <button onclick="increaseFont()">A+</button>
-  <button onclick="decreaseFont()">A-</button>
-  <button onclick="toggleContrast()">🌓 Contrast</button>
-</div>
-<header>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-    </ul>
-  </nav>
-</header>
-<main>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">A11yForgeIT</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="docs.html">Docs</a></li>
+        </ul>
+      </nav>
+      <div class="controls">
+        <button id="theme-toggle">🌓</button>
+        <button id="font-inc">A+</button>
+        <button id="font-dec">A-</button>
+      </div>
+    </div>
+  </header>
 
-<section class="hero">
-  <h1>Welcome to A11yForgeIT</h1>
-  <p>Building accessible IT solutions for everyone.</p>
-</section>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Accessible Web Templates for Small Businesses</h2>
+        <p>Build modern, responsive, and WCAG-compliant websites with ease.</p>
+        <div class="cta-buttons">
+          <a href="docs.html" class="btn primary">Get Started</a>
+          <a href="about.html" class="btn secondary">Learn More</a>
+        </div>
+        <div class="hero-placeholder"></div>
+      </div>
+    </section>
 
-</main>
-<footer>
-  <div class="footer-container">
-    <p>&copy; 2025 A11yForgeIT. All rights reserved.</p>
-    <nav class="footer-nav">
-      <a href="privacy.html">Privacy</a> | 
-      <a href="terms.html">Terms</a> | 
-      <a href="accessibility.html">Accessibility</a> | 
-      <a href="docs.html">Docs/KB</a> | 
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</footer>
+    <section class="features container">
+      <h3>Why A11yForgeIT?</h3>
+      <div class="feature-grid">
+        <div class="card">Accessibility-First</div>
+        <div class="card">Responsive by Default</div>
+        <div class="card">Easy to Customize</div>
+        <div class="card">Optimized for Small Business</div>
+      </div>
+    </section>
 
-<script>
-let fontSize = 100;
-function increaseFont() {
-  fontSize += 10;
-  document.body.style.fontSize = fontSize + "%";
-}
-function decreaseFont() {
-  fontSize -= 10;
-  document.body.style.fontSize = fontSize + "%";
-}
-function toggleContrast() {
-  document.body.classList.toggle("high-contrast");
-}
-</script>
+    <section class="cta-banner">
+      <div class="container">
+        <h3>Ready to build your accessible site?</h3>
+        <a href="contact.html" class="btn primary">Contact Us</a>
+      </div>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="container">
+      <nav>
+        <ul class="footer-links">
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+          <li><a href="docs.html">Docs</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2025 A11yForgeIT. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const fontInc = document.getElementById('font-inc');
+    const fontDec = document.getElementById('font-dec');
+    let fontSize = 100;
+
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+
+    fontInc.addEventListener('click', () => {
+      fontSize += 10;
+      document.body.style.fontSize = fontSize + '%';
+    });
+
+    fontDec.addEventListener('click', () => {
+      fontSize -= 10;
+      document.body.style.fontSize = fontSize + '%';
+    });
+  </script>
 </body>
 </html>
